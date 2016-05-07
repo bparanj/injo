@@ -1,0 +1,16 @@
+<h1>Comment</h1>
+
+<p>
+  <strong>Content:</strong>
+  <%=h @comment.content %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @comment.user.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_comment_path(@comment) %> |
+  <%= link_to "Destroy", @comment, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", comments_path %>
+</p>
